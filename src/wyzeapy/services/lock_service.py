@@ -27,7 +27,7 @@ class LockService(BaseService):
         # Check if the door is locked
         if locker_status:
             if locker_status.get("door") and locker_status.get("hardlock"):
-                lock.unlocked = locker_status.get("door") == 2 and locker_status.get("hardlock") == 2
+                lock.unlocked = locker_status.get("door") == 1 and locker_status.get("hardlock") == 2
         
         return lock
 
